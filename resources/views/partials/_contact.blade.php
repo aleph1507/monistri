@@ -11,7 +11,8 @@
                 <div id="errormessage"></div>
                 
                 <div class="form-sec">
-                    <form action="" method="post" role="form" class="contactForm">
+                    <form action="{{ url('contact') }}" method="post" role="form" class="contactForm">
+                        {{csrf_field()}}
                         <div class="col-md-4 form-group">
                             <input type="text" name="name" class="form-control text-field-box" id="name" placeholder="Вашето Име" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                             <div class="validation"></div>
@@ -31,6 +32,9 @@
                             <button class="button-medium" id="contact-submit" type="submit" name="contact">Прати</button>
                         </div>
                     </form>
+                    <div align="center">
+                        <img src="{{ asset('/images/map.jpg') }}" alt="Mapa" class="img-responsive">
+                    </div>
                 </div>
             </div>
         </div>

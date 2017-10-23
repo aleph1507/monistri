@@ -18,3 +18,4 @@
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script src="contactform/contactform.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>

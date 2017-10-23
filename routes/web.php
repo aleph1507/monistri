@@ -11,10 +11,21 @@
 |
 */
 
+use App\Product;
+use App\Category;
+
 Route::get('/', function () {
-    return view('welcome');
+	$products = Product::orderBy('id', 'desc')->get();
+	$categories = Category::orderBy('id')->get();
+    return view('welcome')->withProducts($products)->withCategories($categories);
 });
 
 Auth::routes();
+
+Route::resource('/products', 'ProductsController');
+
+Route::resource('/categories', 'CategoryController');
+
+Route::post('/contact', 'MiscController@sendmail');
 
 Route::get('/home', 'HomeController@index')->name('home');

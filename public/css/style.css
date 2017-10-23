@@ -257,7 +257,7 @@ p.cta-sub-title
   transform: translateY(-200%); 
 
   /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
+  transition: opacity .5s, visibility .5s;
 }
 .mix:hover .img_desc {
   visibility: visible;
@@ -433,6 +433,7 @@ margin-top: 5px;
     -ms-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
+
 .footer {
     background-color: #040E18;
 }
@@ -619,3 +620,60 @@ p.cta-sub-title {
 /**************************************
 form element
 **************************************/
+
+.downed {
+    margin-top:7%;
+}
+
+.form-margin {
+    margin-top:3%;
+    margin-bottom:3%;
+}
+
+.form-bgcolor {
+    background-color:#AAAAFF;
+}
+
+.form-control-vmargin {
+    margin-top:2%;
+}
+
+.product_thumbnail {
+    max-height: 10%;
+}
+
+.product-pic {
+    display:block;
+    margin-left:30%;
+    margin-right:30%;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+
+.product-img {
+    max-width: 300px;
+    height: 400px;
+}
+
+.blocker {
+    z-index:1100;
+}
+
+.modal {
+    z-index:1200;
+}
+
+.close-modal{
+    z-index:2000;
+    top:10px !important;
+    right:10px !important;
+}
+
+.product-modal {
+    text-align:center;
+}
+
+.product-modal-img {
+    text-align:center;
+    margin:auto;
+}
