@@ -5,7 +5,7 @@
                 <div class="footer_copyright">
                     <p> © Made by <a href="mailto:xrristo@gmail.com">Hristo</a>, All Rights Reserved.</p>                   
                     <div class="credits">
-                        Монистри, Скопје
+                        Делфина Рачно Изработен Накит, Скопје
                     </div>
                 </div>
             </div>

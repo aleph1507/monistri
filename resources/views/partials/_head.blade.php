@@ -10,4 +10,5 @@
   <link rel="stylesheet" type="text/css" href="/css/slick-team-slider.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>

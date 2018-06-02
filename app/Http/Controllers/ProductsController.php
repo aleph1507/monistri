@@ -48,7 +48,9 @@ class ProductsController extends Controller
         $this->validate($request, [
                 'ime' => 'required|min:2',
                 'cena' => 'required',
-                'slika' => 'sometimes|image'
+                'slika' => 'sometimes|image',
+                'paypal_button' => 'sometimes',
+                'apm' => 'sometimes'
             ]);
 
         $product = new Product();
@@ -59,6 +61,9 @@ class ProductsController extends Controller
             Image::make($slika)->save($location); 
             $product->slika = $filename;  
         }
+
+        $product->paypal_button = $request->paypal_button ? $request->paypal_button : null;
+        $product->apm = $request->apm ? $request->apm : null;
 
         $product->ime = $request->ime;
         $product->cena = $request->cena;
@@ -108,7 +113,10 @@ class ProductsController extends Controller
         $this->validate($request, [
                 'ime' => 'sometimes|min:2',
                 'cena' => 'sometimes',
-                'slika' => 'sometimes|image'
+                'slika' => 'sometimes|image',
+                'paypal_button' => 'sometimes',
+                'apm' => 'sometimes'
+
             ]);
 
         $product = Product::find($id);
@@ -121,6 +129,12 @@ class ProductsController extends Controller
 
         if($request->category)
             $product->category_id = $request->category;
+
+        if($request->paypal_button)
+            $product->paypal_button = $request->paypal_button;
+
+        if($request->apm)
+            $product->apm = $request->apm;
 
         if($request->hasFile('slika')){
             $slika = $request->file('slika');

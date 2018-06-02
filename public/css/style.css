@@ -146,8 +146,8 @@ a.btn-banner:hover, a.btn-banner:focus
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 62px;
-    letter-spacing: 6px;
+    font-size: 55px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 400;
     color: #ffffff;
@@ -155,6 +155,8 @@ a.btn-banner:hover, a.btn-banner:focus
     -moz-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     -ms-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
+    word-wrap: break-word;
+    word-spacing: 0.7em;
 }
 .container .jumbotron, .container-fluid .jumbotron {
     padding-right: 60px;
@@ -237,25 +239,25 @@ p.cta-sub-title
 {
 	background-color: RGBA(236, 240, 241, 0.04);
 }
-#Container .mix{
+.Container .mix{
 	display: none;
 }
 .img_desc {
   position: absolute;
-  top: 0;
+  /*top: 10vh;*/
   bottom: 0;
   left: 0;
   right: 0;
-  background-color:rgba(0,0,0,0.5);
+  background-color:rgba(0,0,0,0.2);
   text-align:center;
   font-size:2.5em;
   color: #fff;
   visibility: hidden;
   opacity: 0;
   position: relative;
-  top: 30%;
+  top: 10vh;
   transform: translateY(-200%); 
-
+  max-width:350px;
   /* transition effect. not necessary */
   transition: opacity .5s, visibility .5s;
 }
@@ -280,6 +282,10 @@ p.cta-sub-title
 .filimg
 {
 	margin-bottom: 30px;
+}
+
+.filter {
+    margin-bottom:1vh;
 }
 .fil-btn .active
 {
@@ -644,15 +650,17 @@ form element
 
 .product-pic {
     display:block;
-    margin-left:30%;
+    margin-left:13%;
     margin-right:30%;
     margin-top:2%;
     margin-bottom:2%;
+    max-width:80vw;
+    max-height:95vh;
 }
 
 .product-img {
-    max-width: 300px;
-    height: 400px;
+    max-width: 350px;
+    height: 350px;
 }
 
 .blocker {
@@ -676,4 +684,43 @@ form element
 .product-modal-img {
     text-align:center;
     margin:auto;
+}
+
+p.simor {
+    background:rgba(200,200,200,0.8);
+    text-decoration: underline;
+    text-transform:uppercase;
+    letter-spacing:0.3em;
+    font-size:0.7em;
+}
+
+p.simor a {
+    color:#222266;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.add-product-form {
+    padding:1.5em;
+}
+
+.p-detail {
+    padding:5vh 1vw;
+}
+
+.cat-title {
+    /*display:inline-flex;*/
+    /*text-justify:distribute;*/
+    height:100%;
+    width:100%;
+    text-align:center;
+    letter-spacing: 0.3em;
+    margin:auto;
+    /*text-decoration:underline;*/
+    margin-bottom:1.5vh;
+    border-left:0.5em solid #6E8E96;
+    border-bottom:1px solid #6E8E96;
+    background: rgba(110, 142, 150, 0.3);
 }

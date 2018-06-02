@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Product;
 use Session;
 
 class CategoryController extends Controller
@@ -48,6 +49,7 @@ class CategoryController extends Controller
 
         $cat = new Category;
         $cat->name = $request->name;
+        $cat->type = $request->type;
 
         $cat->save();
 
@@ -93,6 +95,7 @@ class CategoryController extends Controller
 
         $cat = Category::find($id);
         $cat->name = $request->name;
+        $cat->type = $request->type;
 
         $cat->save();
 
@@ -110,6 +113,13 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $cat = Category::find($id);
+
+        $products = Product::all();
+
+        foreach($products as $p){
+            if($p->category_id == $cat->id)
+                $p->delete();
+        }
 
         $cat->delete();
 

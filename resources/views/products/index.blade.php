@@ -26,6 +26,7 @@
 							<img src="{{ asset('images/product_images/' . $product->slika) }}" alt="" class='product_thumbnail'>
 						</td>
 						<td>Категорија: {{ $product->category->name }}</td>
+						<td>Тип: {{ $product->category->type == 1? 'Накит' : 'Дел' }}</td>
 						<td>
 							<a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning">Промени</a>
 						</td>
@@ -44,7 +45,7 @@
 
 	</div>
 
-	<div class="container form-margin form-bgcolor">
+	<div class="container form-margin form-bgcolor add-product-form">
 		<p><span>Додади продукт:</span></p>
 		{{ Form::open(['route' => 'products.store', 'files' => 'true']) }}
 
@@ -63,6 +64,12 @@
 
 			{{ Form::label('slika', 'Слика:', ['class' => 'form-control-vmargin']) }}
 			{{ Form::file('slika', ['accept' => 'image/*']) }}
+
+			{{ Form::label('paypal_button', 'PayPal Копче', ['class' => 'form-control-vmargin']) }}
+			{{ Form::textarea('paypal_button', null , ['class' => 'form-control', 'size' => '50x5', 'placeholder' => 'Paypal code'])}}
+
+			{{ Form::label('apm', 'Додаден начин на плаќање', ['class' => 'form-control-vmargin']) }}
+			{{ Form::textarea('apm', 'Додатен начин на плаќање: mailto:delfinahandmade@gmail.com', ['class' => 'form-control', 'size' => '50x5', 'placeholder' => 'Додатен начин на плаќање'])}}
 
 			{{ Form::submit('Зачувај', ['class' => 'btn btn-primary form-control-vmargin'])}}
 

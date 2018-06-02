@@ -8,7 +8,7 @@
 
 		@include('partials._messages')
 
-		<div class="container form-margin form-bgcolor">
+		<div class="container form-margin form-bgcolor add-product-form">
 
 			<p><span>Промени продукт:</span></p>
 
@@ -31,6 +31,12 @@
 
 				{{ Form::label('slika', 'Слика:') }}
 				{{ Form::file('slika', ['accept' => 'image/*']) }}
+
+				{{ Form::label('paypal_button', 'PayPal Копче', ['class' => 'form-control-vmargin']) }}
+				{{ Form::textarea('paypal_button', null , ['class' => 'form-control', 'size' => '50x5', 'placeholder' => 'Paypal code'])}}
+
+				{{ Form::label('apm', 'Додаден начин на плаќање', ['class' => 'form-control-vmargin']) }}
+				{{ Form::textarea('apm', null, ['class' => 'form-control', 'size' => '50x5', 'placeholder' => 'Додатен начин на плаќање'])}}
 
 				{{ Form::submit('Промени', ['class' => 'btn btn-primary form-control-vmargin'])}}
 
